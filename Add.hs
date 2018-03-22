@@ -40,6 +40,6 @@ diet num
 action = do
     print "a"
     line <- getLine
-    if 1 == line-- compare to variable or input
+    if "1" == line-- compare to variable or input
         then print "b"
         else return ()
