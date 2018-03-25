@@ -25,10 +25,11 @@ quad var = 4 * trip var -- quad 3 = 4 * trip 3 = 4 * (3 * double 3) = 4 * (3 * (
 
 -- dot operator (.) is function composition
 
--- putStr expects a "" type , else error
--- recurPrint x = if x > 0 then putStr "ja" 
-
-
+rePrint :: (Show a, Num b) => a -> [b] -> IO()
+rePrint str n = print(recur str n)
+recur :: (Show b )=> a->[a]->[a]->[b] -> [char]
+recur _ 0 = [] -- let _ be anything
+recur (l:ls) n =  l:(recur ls (n-1)) -- this works??
 
 diet :: (Eq a ,Num a) => a -> String
 diet num
